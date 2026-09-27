@@ -55,17 +55,19 @@ class CartPage extends BasePage {
   }
 
   /**
-   * Proceed to the checkout information step.
+   * Proceed to the checkout information step and wait for it to load.
    */
   async checkout() {
     await this.checkoutButton.click();
+    await this.page.waitForURL(/checkout-step-one\.html/);
   }
 
   /**
-   * Return to the inventory page.
+   * Return to the inventory page and wait for it to load.
    */
   async continueShopping() {
     await this.continueShoppingButton.click();
+    await this.page.waitForURL(/inventory\.html/);
   }
 }
 

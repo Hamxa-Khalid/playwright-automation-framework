@@ -101,10 +101,11 @@ class InventoryPage extends BasePage {
   }
 
   /**
-   * Open the shopping cart page.
+   * Open the shopping cart page and wait until it has loaded.
    */
   async openCart() {
     await this.cartLink.click();
+    await this.page.waitForURL(/cart\.html/);
   }
 }
 
