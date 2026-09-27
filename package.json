@@ -1,0 +1,31 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "description": "End-to-end test automation framework built with Playwright and JavaScript using the Page Object Model, demonstrated against the SauceDemo practice site.",
+  "author": "Muhammad Hamza Khalid <muhammadhamzaqae@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "playwright",
+    "test-automation",
+    "e2e",
+    "page-object-model",
+    "qa",
+    "javascript",
+    "cross-browser"
+  ],
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "report": "npx playwright show-report"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}
